@@ -36,10 +36,49 @@ body {
     margin-bottom: 10px;
 }
 
+#sidebar label {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+    display: block;
+}
+
+#sidebar input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#sidebar input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
 .legend {
     border-top: 1px solid #333;
     font-size: 0.8em;
     padding-top: 1em;
+    margin-top: 20px;
 }
 
 .legend-item {
@@ -76,23 +115,9 @@ body {
     background-color: black;
 }
 
-button {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 15px;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
 iframe {
     flex-grow: 1;
     width: 100%;
     height: 100%;
+    border: none;
 }
