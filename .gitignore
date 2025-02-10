@@ -1,5 +1,4 @@
 elevation-map/venv/
-*.html
 __pycache__/
 
 elevation-app/node_modules
