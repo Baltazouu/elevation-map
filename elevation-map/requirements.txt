@@ -1,0 +1,7 @@
+gpxpy
+numpy
+folium
+matplotlib
+geopy
+fastapi
+uvicorn
