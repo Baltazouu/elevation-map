@@ -1,11 +1,10 @@
-from fastapi import FastAPI, Query,Response
-from fastapi.responses import HTMLResponse
+from io import BytesIO
+from fastapi import FastAPI, Query, Response, UploadFile, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 import os
 import gzip
-import sys
-import folium
 from scripts.generate_route import create_connected_route, display_route_on_map, extract_segments, generate_gpx
+from scripts.gpx_utils import save_gpx_from_gzip 
 
 app = FastAPI()
 
@@ -59,6 +58,20 @@ def get_compressed_gpx():
         headers={"Content-Disposition": "attachment; filename=map.gpx.gz"}
     )
     
+@app.post("/upload_gpx")
+async def upload_gpx(request: Request):
+    """Ajoute un GPX envoyé en tant que fichier compressé"""
+    try:
+        # Lire les données gzip envoyées
+        gzipped_data = await request.body()
+
+        # Appeler la fonction pour décompresser et sauvegarder le fichier
+        saved_filename = save_gpx_from_gzip(gzipped_data)
+
+        return {"message": f"GPX sauvegardé sous le nom {saved_filename}"}
+
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
     
 
 # Pour lancer l'API : uvicorn nom_du_fichier:app --reload
