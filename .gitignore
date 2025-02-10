@@ -2,3 +2,6 @@ elevation-map/venv/
 *.html
 __pycache__/
 
+elevation-app/node_modules
+elevation-map/node_modules
+elevation-map/map_venv/

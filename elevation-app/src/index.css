@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-navbar {
+  /* background-color: #545F43; */
+  background-color: #6c3a9f;
+  color: #fff;
+}
+
+.map-editor {
+  background-color: #f9f9f9;
+  border-right: 1px solid #ededed;
+}
+
+.map-file-selection {
+  background-color: #ededed;
+
+}
+
+
+.map-container {
+  height: 94vh;
+}
+
+.mapboxgl-canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.widget-text-container {
+  position: absolute;
+  padding: 5px;
+  z-index: 100;
+  width: 100%;
+  color: white;
+  font-size: 36px;
+  width: 350px;
+  text-shadow: 4px 4px 8px black;
+
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background-color: #6c3a9f;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #6c3a9f;
+}
