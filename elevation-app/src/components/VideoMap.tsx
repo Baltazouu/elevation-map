@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { TrackData } from "../model/TrackData";
-import { Map } from "./Map";
+import {useState} from "react";
+import {TrackData} from "../model/TrackData";
+import {Map} from "./Map";
 import Editor from "./Editor";
-import { downloadFile } from "../service/Util";
-import { Button, Center, Flex, Grid, GridItem, Spacer } from "@chakra-ui/react";
-import { GpxParser } from "../service/GpxParser";
+import {downloadFile} from "../service/Util";
+import {Button, Flex, Grid, GridItem, Spacer} from "@chakra-ui/react";
+import {GpxParser} from "../service/GpxParser";
 import VideoMapContext from "../context/VideoMapContext";
 
 const DURATION_IN_SEC = 20;
@@ -12,7 +12,7 @@ const START_BEARING = 0;
 
 export const VideoMap: React.FC = () => {
   const [trackData, setTrackData] = useState<TrackData | null>(null);
-  const [keySetting, setKeySetting] = useState<number>(0);
+  const [keySetting] = useState<number>(0);
   const [duration, setDuration] = useState<number>(DURATION_IN_SEC);
   const [bearing, setBearing] = useState<number>(START_BEARING);
   const [is3DEnabled, setIs3DEnabled] = useState<boolean>(true);

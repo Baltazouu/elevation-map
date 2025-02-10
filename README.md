@@ -14,6 +14,7 @@ Ce projet utilise un environnement virtuel Python (venv) pour la gestion des dé
 1. Ouvrez un terminal ou une invite de commande.
 2. Exécutez la commande suivante pour créer un environnement virtuel nommé `venv` :
    ```sh
+   cd elevation-map
    python -m venv venv
    ```
 3. Activez l'environnement virtuel :
@@ -69,3 +70,10 @@ python script.py
 
 ## Lancer l'API
 `uvicorn scripts.map_api:app --reload`
+
+## Côté front
+
+```
+cd elevation-app
+npm i
+```
