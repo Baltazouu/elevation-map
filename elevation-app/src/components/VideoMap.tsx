@@ -56,7 +56,7 @@ export const VideoMap: React.FC = () => {
         <GridItem w='100%' h={"94vh"} className="map-editor" boxShadow='lg'>
           <Flex direction={'column'} justifyContent={'center'} alignItems={'center'} height="100%" padding={4}>
             <Editor />
-            <Button backgroundColor={'#677357'} width={'75%'} onClick={runVideo} isDisabled={trackData == null}>Play</Button>
+            <Button backgroundColor={'#677357'} width={'75%'} onClick={runVideo} isDisabled={trackData == null}>Générer le GPX</Button>
             <Spacer />
             {trackData && <Button backgroundColor={'#677357'} onClick={downloadVideo}
               isLoading={videoBlob == null}

@@ -19,21 +19,26 @@ export const Editor: React.FC = () => {
 
   return (
     <VStack padding={8} spacing={8}>
-      <FormControl>
-        <FormLabel>Dénivelé</FormLabel>
-        <Input type='number' min={MIN_DURATION_IN_SEC} value={duration} onChange={handleDurationChange} />
-      </FormControl>
 
       <FormControl>
-        <FormLabel>Distance</FormLabel>
+        <FormLabel>Dénivelé (m)</FormLabel>
         <Select value={bearing} onChange={handleBearingChanged}>
-          <option value='0'>North</option>
-          <option value='90'>East</option>
-          <option value='180'>South</option>
-          <option value='270'>West</option>
+          <option value='300'>300</option>
+          <option value='600'>300</option>
+          <option value='800'>800</option>
+          <option value='1200'>1200</option>
         </Select>
       </FormControl>
 
+      <FormControl>
+        <FormLabel>Distance (km)</FormLabel>
+        <Select value={bearing} onChange={handleBearingChanged}>
+          <option value='25'>25</option>
+          <option value='40'>40</option>
+          <option value='50'>50</option>
+          <option value='60'>60</option>
+        </Select>
+      </FormControl>
 
     </VStack>
   )
